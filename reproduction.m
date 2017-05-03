@@ -24,13 +24,14 @@ while indexOk == false
     end
 end
 
-% CrossOver aritmético entre os 2 individuos
+% CrossOver entre os 2 individuos
 blend = rand;
 individualA = population(:,indChoosen(1));
 individualB = population(:,indChoosen(2));
 % result1 = (blend*individualA)+((1-blend)*individualB);
 % result2 = ((1-blend)*individualA)+(blend*individualB);
 
+% Aplicando crossover heurístico
 if best(1) < best(2)
     result1 = individualA + blend * (individualA - individualB);
     result2 = individualA;
